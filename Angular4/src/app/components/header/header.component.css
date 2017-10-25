@@ -1,0 +1,16 @@
+.navbar-fixed-top{
+    z-index: 900;
+}
+
+  .navbar-fixed-top {
+    border-bottom: 1px solid #2A3F54;
+  }
+  .navbar-inverse {
+    background-color: #2A3F54;
+    
+  }
+  .shadow {
+      -moz-box-shadow: 0px 5px 10px rgba(41, 40, 40, 0.5);
+      -webkit-box-shadow: 0px 5px 10px rgba(41, 40, 40, 0.5);
+      box-shadow: 0px 5px 10px rgba(41, 40, 40, 0.5);
+  }     

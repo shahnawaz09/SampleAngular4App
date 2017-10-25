@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.col-button{
+    text-align: center;
+}
+
+.mat-form-field {
+    min-height: 5.3em;
+}
+
+.main{
+  margin-top: 28px;
+}
+.ui-widget-content,.ui-widget-header,.ui-column-title{
+  color: #565656 !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+.ui-datatable tbody > tr.ui-widget-content.ui-state-highlight {
+  color: #FFFFFF !important;
+}
+/* Scrollbar styling */
+::-webkit-scrollbar{width:9px;height:9px;}
+::-webkit-scrollbar-button:start:decrement,#doc ::-webkit-scrollbar-button:end:increment{display:block;height:0;background-color:transparent;}
+::-webkit-scrollbar-track-piece{background-color:#FAFAFA;-webkit-border-radius:0;-webkit-border-bottom-right-radius:8px;-webkit-border-bottom-left-radius:8px;}
+::-webkit-scrollbar-thumb:vertical{height:50px;background-color:#999;-webkit-border-radius:8px;}
+::-webkit-scrollbar-thumb:horizontal{width:50px;background-color:#999;-webkit-border-radius:8px;}
+
+body{
+  background-color: transparent!important;
+  color: #565656;
+  font-weight: 400 !important;
+  font-family: 'Open Sans', sans-serif !important;
+  line-height: 125% !important;
+  font-size: 1.3rem !important;
+}
+
+html{
+  background: #fafafa;
+}

@@ -1,0 +1,49 @@
+<p-growl [(value)]="msgs"></p-growl>
+<p-confirmDialog></p-confirmDialog>
+<h1 class="page-header">
+  Add Employee</h1><br>
+<div class="row">
+  <div class="col-md-6">
+    <mat-card>
+      <div class="employee-container">
+        <form class="employee-form">
+        <mat-form-field class="empInput-full-width">
+          <input type="number" matInput placeholder="Id" pTooltip="Enter Id" tooltipPosition="right" [(ngModel)]="id" name="id" [formControl]="idFormControl" tooltipEvent="focus" (change)="assign()">
+          <mat-error *ngIf="idFormControl.hasError('required')">
+              Id is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="empInput-full-width">
+          <input type="text" matInput placeholder="Name" pTooltip="Enter Name" tooltipPosition="right" [(ngModel)]="name" name="name" [formControl]="nameFormControl" tooltipEvent="focus" (change)="assign()">
+          <mat-error *ngIf="nameFormControl.hasError('required')">
+              Name is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="empInput-full-width">
+          <input type="number" matInput="text" placeholder="Reward Points" pTooltip="Enter Reward Points" tooltipPosition="right" [(ngModel)]="points"
+            name="points" [formControl]="rewardsFormControl" tooltipEvent="focus" (change)="assign()">
+            <mat-error *ngIf="rewardsFormControl.hasError('required')">
+                Reward Points is <strong>required</strong>
+              </mat-error>
+        </mat-form-field>
+        <mat-form-field class="empInput-full-width">
+          <input type="number" matInput="text" placeholder="Actual Work Hour" pTooltip="Enter Actual Work Hour" tooltipPosition="right" [(ngModel)]="actualWorkHour"
+            name="actual" [formControl]="actualFormControl" tooltipEvent="focus" (change)="assign()">
+            <mat-error *ngIf="actualFormControl.hasError('required')">
+                Actual Work Hour is <strong>required</strong>
+              </mat-error>
+        </mat-form-field>
+        <mat-form-field class="empInput-full-width">
+          <input type="number" matInput="text" placeholder="Total Work Hour" pTooltip="Enter Total Work Hour" tooltipPosition="right" [(ngModel)]="totalWorkHour"
+            name="total" [formControl]="totalFormControl" tooltipEvent="focus" (change)="assign()">
+            <mat-error *ngIf="totalFormControl.hasError('required')">
+                Total Work Hour is <strong>required</strong>
+              </mat-error>
+        </mat-form-field>
+        </form>
+      </div>
+      <button type="submit" mat-raised-button color="primary" class="saveBtn" (click)="saveEmployee();success()" [disabled]="disableSaveBtn"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+      <button type="submit" mat-raised-button color="warn" class="cancelBtn" (click)="cancel()"><i class="fa fa-times" aria-hidden="true"></i> Cancel</button>
+    </mat-card>
+  </div>
+</div>
